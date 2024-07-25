@@ -1,8 +1,8 @@
-#A Book project which has the following features :
+# A Book Hub with the following features :
 
 1) Get all the Books
 
-#Upcoming features : 
+# Features to be added soon : 
 
 1) Add a Book
 2) View a specific Book
