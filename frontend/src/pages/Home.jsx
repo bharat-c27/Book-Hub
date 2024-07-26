@@ -27,7 +27,7 @@ const Home = () => {
     return (
         <div className="p-4">
             <div className="flex justify-between items-center">
-                <h1 className="text-3xl my-8">Book List</h1>
+                <h1 className="text-4xl font-medium my-8">Book List</h1>
                 <Link to="/books/create">
                     <MdOutlineAddBox className="text-sky-800 text-4xl" />
                 </Link>
@@ -35,7 +35,7 @@ const Home = () => {
             {loading ? (
                 <Spinner />
             ) : (
-                <table className="w-full border border-separate border-spacing">
+                <table className="w-full border border-separate border-spacing-2">
                     <thead>
                         <tr>
                             <th className="border border-slate-600 rounded-md">
