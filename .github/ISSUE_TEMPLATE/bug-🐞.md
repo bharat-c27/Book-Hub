@@ -1,7 +1,7 @@
 ---
-name: Bug report
-about: Create a report to help us improve
-title: "[BUG] : "
+name: "Bug \U0001F41E"
+about: Report an issue to help us improve the project.
+title: "[Bug] <write a small description here>"
 labels: bug
 assignees: ''
 
