@@ -1,13 +1,10 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { AiOutlineEdit } from "react-icons/ai";
-import { BsInfoCircle } from "react-icons/bs";
-import { MdOutlineAddBox, MdOutlineDelete } from "react-icons/md";
+import { MdOutlineAddBox } from "react-icons/md";
 import { Link } from "react-router-dom";
 import Spinner from "../components/Spinner";
 import BooksCard from "../components/home/BooksCard";
 import BooksTable from "../components/home/BooksTable";
-//FIXME: why is this showing red ?
 
 const Home = () => {
     const [books, setBooks] = useState([]);
