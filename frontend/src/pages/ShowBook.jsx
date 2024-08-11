@@ -32,38 +32,52 @@ const ShowBook = () => {
             ) : (
                 <div className="flex flex-col mx-auto border-2 border-sky-400 rounded-xl w-fit p-4">
                     <div className="my-4">
-                        <span className="text-xl mr-4 text-gray-500">Id</span>
-                        <span>{book._id}</span>
+                        <span className="text-xl mr-4 text-gray-500 border-b-4 border-gray-400">
+                            Id
+                        </span>
+                        <span className="before:content-[':_']">
+                            {book._id}
+                        </span>
                     </div>
                     <div className="my-4">
-                        <span className="text-xl mr-4 text-gray-500">
+                        <span className="text-xl mr-4 text-gray-500 border-b-4 border-gray-400">
                             Title
                         </span>
-                        <span>{book.title}</span>
+                        <span className="before:content-[':_']">
+                            {book.title}
+                        </span>
                     </div>
                     <div className="my-4">
-                        <span className="text-xl mr-4 text-gray-500">
+                        <span className="text-xl mr-4 text-gray-500 border-b-4 border-gray-400">
                             Author
                         </span>
-                        <span>{book.author}</span>
+                        <span className="before:content-[':_']">
+                            {book.author}
+                        </span>
                     </div>
                     <div className="my-4">
-                        <span className="text-xl mr-4 text-gray-500">
+                        <span className="text-xl mr-4 text-gray-500 border-b-4 border-gray-400">
                             Publish Year
                         </span>
-                        <span>{book.publishYear}</span>
+                        <span className="before:content-[':_']">
+                            {book.publishYear}
+                        </span>
                     </div>
                     <div className="my-4">
-                        <span className="text-xl mr-4 text-gray-500">
+                        <span className="text-xl mr-4 text-gray-500 border-b-4 border-gray-400">
                             Create Time
                         </span>
-                        <span>{new Date(book.createdAt).toString()}</span>
+                        <span className="before:content-[':_']">
+                            {new Date(book.createdAt).toString()}
+                        </span>
                     </div>
                     <div className="my-4">
-                        <span className="text-xl mr-4 text-gray-500">
+                        <span className="text-xl mr-4 text-gray-500 border-b-4 border-gray-400">
                             Last Update Time
                         </span>
-                        <span>{new Date(book.updatedAt).toString()}</span>
+                        <span className="before:content-[':_']">
+                            {new Date(book.updatedAt).toString()}
+                        </span>
                     </div>
                 </div>
             )}
