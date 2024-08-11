@@ -28,7 +28,7 @@ const BookSingleCard = ({ book }) => {
             </div>
             <div className="flex justify-between items-center gap-x-2 mt-5 p-4">
                 <BiShow
-                    className="text-2xl text-green-800 hover:text-black"
+                    className="text-2xl text-green-800 hover:text-black cursor-pointer"
                     onClick={() => setShowModal(true)}
                 />
                 <Link to={`/books/details/${book._id}`}>
