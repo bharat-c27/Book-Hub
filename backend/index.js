@@ -12,7 +12,17 @@ const port = process.env.PORT || 5000;
 app.use(express.json());
 
 //middleware for handling cores policy
-app.use(cors());
+// app.use(cors());
+
+app.use(
+    cors({
+        origin: [
+            "https://book-hub-frontend-two.vercel.app/",
+            "http://localhost:8000",
+        ],
+    })
+);
+
 // app.use(
 //     cors({
 //         origin: "http://localhost:8000",
