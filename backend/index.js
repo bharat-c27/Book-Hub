@@ -1,4 +1,4 @@
-// import cors from "cors";
+import cors from "cors";
 import dotenv from "dotenv";
 import express, { response } from "express";
 import mongoose from "mongoose";
@@ -25,7 +25,7 @@ app.use(express.json());
 //     })
 // );
 
-const cors = require('cors');
+// const cors = require('cors');
 
 app.use(cors({
   origin: [
