@@ -3,6 +3,8 @@ import { Book } from "../models/bookModel.js";
 
 const router = express.Router();
 
+app.options('*', cors()); 
+
 //get a single book
 router.get("/:id", async (req, res) => {
     try {
