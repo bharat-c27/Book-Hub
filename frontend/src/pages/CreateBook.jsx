@@ -22,7 +22,7 @@ const CreateBook = () => {
 
         setLoading(true);
         axios
-            .post(`https://book-hub-project.vercel.app/books/`, data)
+            .post(`https://book-hub-api.vercel.app/books/`, data)
             .then(() => {
                 setLoading(false);
                 enqueueSnackbar("Book created successfully", {
