@@ -1,0 +1,8 @@
+{
+  "rewrites": [                    
+    {
+      "source": "/(.*)",          
+      "destination": "/App.jsx" // Sends all requests to index.html
+    }
+  ]
+}
