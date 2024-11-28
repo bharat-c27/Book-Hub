@@ -1,4 +1,4 @@
-import cors from "cors";
+// import cors from "cors";
 import dotenv from "dotenv";
 import express, { response } from "express";
 import mongoose from "mongoose";
@@ -14,14 +14,27 @@ app.use(express.json());
 //middleware for handling cores policy
 // app.use(cors());
 
-app.use(
-    cors({
-        origin: [
-            "https://book-hub-frontend-two.vercel.app/",
-            "http://localhost:8000",
-        ],
-    })
-);
+// app.use(
+//     cors({
+//         origin: [
+//             "https://book-hub-frontend-two.vercel.app/",
+//             "http://localhost:8000",
+//         ],  
+//         credentials: true,  
+//         methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS']
+//     })
+// );
+
+const cors = require('cors');
+
+app.use(cors({
+  origin: [
+    'https://book-hub-frontend-two.vercel.app',  
+    'http://localhost:3000'  
+  ],
+  credentials: true,  
+  methods: ['GET', 'POST', 'PUT', 'DELETE']
+}));
 
 // app.use(
 //     cors({
