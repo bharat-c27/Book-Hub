@@ -53,8 +53,10 @@ app.get("/", (req, res) => {
 app.use("/books", bookRoute);
 
 mongoose
-    .connect(process.env.MONGODB_URI)
-    .then(() => {
+    .connect(process.env.MONGODB_URI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true
+    }).then(() => {
         console.log("Connected with mongodb");
         app.listen(port, () => {
             console.log(`App is listening to port: ${port}`);
