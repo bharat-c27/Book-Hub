@@ -6,6 +6,8 @@ import bookRoute from "./routes/bookRoute.js";
 dotenv.config();
 const app = express();
 
+const port = process.env.PORT || 5000;
+
 //middleware for parsing req body
 app.use(express.json());
 
@@ -31,8 +33,8 @@ mongoose
     .connect(process.env.MONGODB_URI)
     .then(() => {
         console.log("Connected with mongodb");
-        app.listen(process.env.PORT, () => {
-            console.log(`App is listening to port: ${process.env.PORT}`);
+        app.listen(port, () => {
+            console.log(`App is listening to port: ${port}`);
         });
     })
     .catch((error) => {
