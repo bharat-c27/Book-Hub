@@ -11,6 +11,13 @@ const port = process.env.PORT || 5000;
 //middleware for parsing req body
 app.use(express.json());
 
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', 'https://book-hub-frontend-two.vercel.app'); 
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE'); 
+  next();
+});
+
+
 //middleware for handling cores policy
 // app.use(cors());
 
@@ -27,11 +34,13 @@ app.use(express.json());
 
 // const cors = require('cors');
 
-app.use(cors({
-  origin: "*",
-  credentials: true,  
-  methods: ['GET', 'POST', 'PUT', 'DELETE']
-}));
+// app.use(cors({
+//   origin: "*",
+//   credentials: true,  
+//   methods: ['GET', 'POST', 'PUT', 'DELETE']
+// }));
+
+
 
 // app.use(
 //     cors({
